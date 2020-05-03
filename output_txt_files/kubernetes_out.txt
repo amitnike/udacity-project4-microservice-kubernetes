@@ -1,1 +1,31 @@
-<paste log output from Kubernetes-mediated prediction, here>
+
+
+(.devops) amit@amit-pc:~/Downloads/UdacityProject2-master/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh 
+deployment "udacity-proj4" created
+NAME                             READY     STATUS              RESTARTS   AGE
+udacity-proj4-6c5f666b56-mcss9   0/1       ContainerCreating   0          0s
+Error from server (NotFound): pods "udacity-proj4" not found
+(.devops) amit@amit-pc:~/Downloads/UdacityProject2-master/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl get pods
+NAME                             READY     STATUS    RESTARTS   AGE
+udacity-proj4-6c5f666b56-mcss9   1/1       Running   0          23s
+(.devops) amit@amit-pc:~/Downloads/UdacityProject2-master/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl port-forward udacity-proj4-6c5f666b56-mcss9 8000:80
+Forwarding from 127.0.0.1:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+
+
+
+amit@amit-pc:~/Downloads/UdacityProject2-master/DevOps_Microservices/project-ml-microservice-kubernetes$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+amit@amit-pc:~/Downloads/UdacityProject2-master/DevOps_Microservices/project-ml-microservice-kubernetes$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
