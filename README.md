@@ -2,30 +2,35 @@
 
 ## Project Overview
 
-This is a machine learning api that's run using Kubernetes. The api is a pre-trained sklearn model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on the data source site.
-
 Running the application
 Standalone:
+
 #Setup a python virtual environment and activate it
+
 python3 -m venv ~/.devops
 source ~/.devops/bin/activate
 
-#Install the necessary dependencies
+##Install the necessary dependencies
+
 make install
 
-#Run the main application
+##Run the main application
+
 python app.py
 Run in Docker: ./run_docker.sh
 Run in Kubernetes: ./run_kubernetes.sh
 
 
-Predict housing prices
+##Predict housing prices
+
 While the application is running, run ./make_predicion.sh to make calls to the API
 
-Upload Docker image to DockerHub
+##Upload Docker image to DockerHub
+
 After running ./run_docker.sh, execute script./upload_docker.sh to upload image to DockerHub
 
-Project Files
+##Project Files
+
 app.py: The Flask API
 requirements.txt: Prerequisites of Python packages for Flask API to run
 model_data/boston_housing_prediction.joblib: Pretrained sklearn model for the API
