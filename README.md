@@ -5,31 +5,31 @@
 Running the application
 Standalone:
 
-#Setup a python virtual environment and activate it
+## Setup a python virtual environment and activate it
 
 python3 -m venv ~/.devops
 source ~/.devops/bin/activate
 
-##Install the necessary dependencies
+## Install the necessary dependencies
 
 make install
 
-##Run the main application
+## Run the main application
 
 python app.py
 Run in Docker: ./run_docker.sh
 Run in Kubernetes: ./run_kubernetes.sh
 
 
-##Predict housing prices
+## Predict housing prices
 
 While the application is running, run ./make_predicion.sh to make calls to the API
 
-##Upload Docker image to DockerHub
+## Upload Docker image to DockerHub
 
 After running ./run_docker.sh, execute script./upload_docker.sh to upload image to DockerHub
 
-##Project Files
+## Project Files
 
 app.py: The Flask API
 requirements.txt: Prerequisites of Python packages for Flask API to run
